@@ -134,6 +134,8 @@ ul li {
 
 /*--------------------*/
 
+/*header*/
+
 .header__inner {
   width: 100%;
   min-height: 832px;
@@ -565,6 +567,8 @@ ul li {
      object-fit: cover;
 }
 
+/*header-end*/
+
 html {
   scrollbar-gutter: stable;
 }
@@ -572,6 +576,8 @@ html {
 body._lock {
   overflow: hidden;
 }
+
+/*custom class*/
 
 .yellow-button {
   background-color: rgb(247, 148, 29);
@@ -589,7 +595,7 @@ body._lock {
   padding: 11px 20px;
 }
 
-/*header class*/
+/*header personal class*/
 
 .phone {
   color: rgb(0, 9, 60);
@@ -600,6 +606,8 @@ body._lock {
   margin: 0 auto;
   min-height: 820px;
 }
+
+/*header personal class end*/
 
 @media (max-width: 1199.9px) {
   .header__nav-li {
@@ -710,10 +718,35 @@ body._lock {
     -o-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
     overflow: auto;
+    z-index: 4;
   }
 
   .header__nav._active {
     left: 0;
+  }
+
+  .header__nav._active .header__nav-label {
+    color: rgb(247, 148, 29);
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  .header__nav._active .header__nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .header__nav._active .header__nav-icon {
+    display: none;
+  }
+
+  .header__nav._active .submenu > .header__nav-label {
+    padding: 0;
   }
 
   .header__button {
@@ -763,7 +796,7 @@ body._lock {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(247, 148, 29);
   }
 
   .menu__icon span {
@@ -774,7 +807,7 @@ body._lock {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(247, 148, 29);
   }
 
   .menu__icon::before,
@@ -833,17 +866,6 @@ body._lock {
 
   .menu__body._active {
     left: 0;
-  }
-
-  .menu__body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: 70px;
-    background-color: #912105;
-    z-index: 2;
   }
 }
 
