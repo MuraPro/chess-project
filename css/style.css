@@ -236,6 +236,7 @@ ul li {
 .header__content {
   background: rgb(0, 9, 60);
   color: white;
+  position: relative;
 }
 
 .header__row {
@@ -309,6 +310,10 @@ ul li {
   margin-bottom: 30px;
 }
 
+.header__image {
+  position: relative;
+}
+
 .header__image-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -322,6 +327,63 @@ ul li {
   position: absolute;
   top: 25px;
   left: -120px;
+  z-index: 3;
+}
+
+.header__vector1 {
+  position: absolute;
+  bottom: -50px;
+  left: -241px;
+  z-index: 3;
+}
+
+.header__vector2 {
+  position: absolute;
+  bottom: -37px;
+  left: 292px;
+  z-index: 3;
+}
+
+.header__vector3 {
+  position: absolute;
+  bottom: 222px;
+  left: 450px;
+  z-index: 3;
+}
+
+.header__vector5 {
+  position: absolute;
+  top: 24px;
+  left: 120px;
+  z-index: 3;
+}
+
+.header__vector6 {
+  position: absolute;
+  top: 161px;
+  right: 61px;
+  z-index: 3;
+}
+
+.header__vector7 {
+  position: absolute;
+  bottom: 42px;
+  left: 37px;
+  z-index: 3;
+}
+
+.header__vector8 {
+  position: absolute;
+  top: 45px;
+  right: 115px;
+  z-index: 3;
+}
+
+.header__vector9 {
+  position: absolute;
+  bottom: -22px;
+  right: 77px;
+  z-index: 3;
 }
 
 .submenu > .header__nav-label {
@@ -492,7 +554,6 @@ ul li {
 .content-container {
   max-width: 1200px;
   padding: 0 2px;
-  border: 1px solid red;
   margin: 0 auto;
   min-height: 100px;
 }
@@ -538,12 +599,27 @@ body._lock {
   max-width: 1920px;
   margin: 0 auto;
   min-height: 820px;
-  border: 1px solid red;
 }
 
 @media (max-width: 1199.9px) {
   .header__nav-li {
     margin-right: 20px;
+  }
+
+  .header__vector2 {
+    display: none;
+  }
+
+  .header__vector3 {
+    display: none;
+  }
+
+  .header__vector8 {
+    display: none;
+  }
+
+  .header__vector9 {
+    display: none;
   }
 }
 
