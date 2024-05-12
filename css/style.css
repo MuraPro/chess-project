@@ -671,6 +671,10 @@ ul li {
 
 /*section-movie*/
 
+.movie {
+  margin-bottom: 70px;
+}
+
 .movie__container {
   min-height: 1px;
   position: relative;
@@ -717,6 +721,114 @@ ul li {
 }
 
 /*section-movie end*/
+
+/*aside*/
+
+.aside {
+  padding-bottom: 100px;
+}
+
+.aside__container {
+  border: 1px solid red;
+}
+
+.aside__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.aside__holder {
+  margin-bottom: 60px;
+}
+
+.aside__row {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  padding: 5px;
+}
+
+.aside__column-img {
+  width: 32px;
+  height: 40px;
+}
+
+.no-webp .aside__footer {
+  background: url("../img/section-aside/Subtract.jpeg") no-repeat top/cover; }
+
+.aside__footer {
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aside__footer-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 80px 0px 40px 0px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.aside__section-left {
+  width: 40%;
+}
+
+.aside__section-right {
+  width: 40%;
+}
+
+.aside__section-caption {
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.aside__footer-btn {
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat-b";
+  font-size: 14px;
+  line-height: 26px;
+  margin-bottom: 60px;
+}
+
+.box__title {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat-b";
+  font-size: 36px;
+  line-height: 34px;
+  margin-bottom: 25px;
+}
+
+.box__text {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/*aside-end*/
 
 html {
   scrollbar-gutter: stable;
@@ -862,6 +974,34 @@ main {
 
   .movie__vector4 {
     display: none;
+  }
+
+  .aside__footer-table {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .aside__section-left {
+    width: 100%;
+    padding: 0px 2px;
+    margin-bottom: 15px;
+  }
+
+  .aside__section-right {
+    width: 100%;
+    padding: 0px 2px;
+  }
+
+  .aside__section-caption {
+    text-align: center;
   }
 }
 
@@ -1062,6 +1202,14 @@ main {
   .purpose__row {
     margin-top: 150px;
   }
+
+  .box__title {
+    text-align: center;
+  }
+
+  .box__text {
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1094,4 +1242,10 @@ main {
   .purpose__description {
     text-align: center;
   }
+
+  .aside__holder {
+    padding: 0px 2px;
+  }
 }
+
+.webp .aside__footer { background: url(../img/section-aside/Subtract.webp) no-repeat top/cover; }
