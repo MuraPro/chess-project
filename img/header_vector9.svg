@@ -3,10 +3,10 @@
 			Created with Pixso.
 	</desc>
 	<defs>
-		<linearGradient x1="-0.000031" y1="131.431854" x2="-0.000031" y2="0.000000" id="paint_linear_2201_398_0" gradientUnits="userSpaceOnUse">
+		<linearGradient x1="339.084503" y1="131.431854" x2="339.084503" y2="0.000000" id="paint_linear_2201_399_0" gradientUnits="userSpaceOnUse">
 			<stop stop-color="#F7941D"/>
 			<stop offset="1.000000" stop-color="#27AAE1"/>
 		</linearGradient>
 	</defs>
-	<path id="Vector 181" d="M338.08 0L338.08 46.34L81.08 46.34L0 131.43" stroke="url(#paint_linear_2201_398_0)" stroke-opacity="1.000000" stroke-width="2.000000"/>
+	<path id="Vector 182" d="M1 0L1 46.34L258 46.34L339.08 131.43" stroke="url(#paint_linear_2201_399_0)" stroke-opacity="1.000000" stroke-width="2.000000"/>
 </svg>
