@@ -1,140 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20240512110854" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240512110854"
-  />
-  <title>Relvise</title>
-</head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20240512124032" />
+    <title>Chess</title>
+  </head>
 
   <body>
-    <header class="header page-header">
-  <picture>
-    <source
-      class="header__img"
-      srcset="img/header_bg.jpeg"
-      type="image/jpeg"
-      alt="изображение заднего фона"
-      loading="lazy"
-    />
-    <source
-      class="header__img"
-      srcset="img/header_bg.webp"
-      type="image/webp"
-      alt="изображение заднего фона"
-      loading="lazy"
-    />
-    <img
-      class="header__img"
-      src="img/header_bg.jpeg"
-      alt="изображение заднего фона"
-      loading="lazy"
-    />
-  </picture>
-  <div class="page-header__container container">
-    <div class="page-header__menu">
-      <div class="page-header__logo logo">
-        <a href="#" class="logo-item">Relvise</a>
-      </div>
-
-      <div class="page-header__adaptive">
-        <div class="page-header__burger">
-          <span></span>
-        </div>
-        <nav class="page-header__nav navbar">
-          <ul class="navbar__list">
-            <li class="navbar__box">
-              <a href="#" class="navbar__link">Home</a>
-            </li>
-            <li class="navbar__box">
-              <a href="#" class="navbar__link">Product</a>
-            </li>
-            <li class="navbar__box">
-              <a href="#" class="navbar__link">Pricing</a>
-            </li>
-            <li class="navbar__box">
-              <a href="#" class="navbar__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="page-header__registration" data-type="open">
-          <img
-            class="page-header__registration-img"
-            src="../img/header_icon/login-svgrepo-com.svg"
-            alt="Registration"
-            data-type="open"
-            width="33px"
-            height="33px"
-            alt="иконка всплывающего меню"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <div class="page-header__popap popap">
-        <div class="popap__body" data-type="backdrop">
-          <form class="popap__form" name="popapForm">
-            <div class="popap__inner">
-              <div class="popap__close" data-type="close">X</div>
-              <h3 class="popap__title">Sign In</h3>
-              <label class="popap__label-login label" for="login">Login</label>
-              <input
-                class="popap__login input _req"
-                type="text"
-                placeholder="enter login"
-                name="login-input"
-                id="login"
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__container container">
+          <!-- навбар -->
+          <div class="header__navbar">
+            <div class="header__logo logo">
+              <img
+                src="img/icons/header_brand-icon.svg"
+                alt="логотип"
+                title="логотип"
+                class="logo__item"
               />
-              <label class="popap__label-password label" for="password"
-                >Password</label
-              >
-              <input
-                class="popap__password input _req"
-                type="password"
-                placeholder="enter password"
-                id="password"
-              />
-              <input
-                class="popap__checkbox-input"
-                type="checkbox"
-                id="custom-checkbox"
-              />
-              <label for="custom-checkbox" class="popap__label-checkbox label"
-                >save</label
-              >
-              <button
-                class="button popap__button"
-                type="submit"
-                value="Отправить"
-              >
-                Send
+            </div>
+            <div class="header__menu">
+              <div class="header__burger">
+                <span></span>
+              </div>
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-li">
+                    <a href="#" class="header__nav-link">
+                      <img
+                        src="img/icons/tabs.svg"
+                        alt="иконка"
+                        title="иконка"
+                        class="header__nav-icon"
+                      />
+                      <span class="header__nav-label"> Все курсы</span>
+                    </a>
+                  </li>
+                  <li class="header__nav-li">
+                    <a href="#" class="header__nav-link"
+                      ><span class="header__nav-label">Мероприятия</span></a
+                    >
+                  </li>
+                  <li class="header__nav-li">
+                    <a href="#" class="header__nav-link"
+                      ><span class="header__nav-label">Базы знаний</span></a
+                    >
+                  </li>
+                  <li class="header__nav-li">
+                    <a href="#" class="header__nav-link"
+                      ><span class="header__nav-label">Карьера</span></a
+                    >
+                  </li>
+                  <li class="header__nav-li">
+                    <a href="#" class="header__nav-link submenu">
+                      <img
+                        src="img/icons/header_location-icon.svg"
+                        alt="иконка"
+                        title="иконка"
+                        class="header__nav-icon"
+                      />
+                      <span class="header__nav-label">Нижний Новгород</span>
+                      <ul class="submenu">
+                        <li class="submenu__li">
+                          <label for="city1" class="submenu__title"
+                            >Дзержинск</label
+                          >
+                          <input
+                            type="checkbox"
+                            class="submenu__link"
+                            id="city1"
+                          />
+                        </li>
+                        <li class="submenu__li">
+                          <label for="city2" class="submenu__title"
+                            >Нижний Новгород</label
+                          >
+                          <input
+                            type="checkbox"
+                            class="submenu__link"
+                            id="city2"
+                          />
+                        </li>
+                        <li class="submenu__li">
+                          <label for="city3" class="submenu__title"
+                            >On-line</label
+                          >
+                          <input
+                            type="checkbox"
+                            class="submenu__link"
+                            id="city3"
+                          />
+                        </li>
+                      </ul>
+                    </a>
+                  </li>
+                  <li class="header__nav-li">
+                    <a href="#" class="header__nav-link">
+                      <img src="" alt="" class="header__nav-icon" />
+                      <span class="header__nav-label">8 800 950-33-98</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <button class="header__button">
+                <img
+                  src="img/icons/header_login-icon.svg"
+                  alt="иконка"
+                  title="иконка"
+                  class="header__login-icon"
+                />
+                <span class="header__button-label">Войти</span>
               </button>
             </div>
-          </form>
+          </div>
+          <!-- левая часть -->
+          <div class="header__content">
+            <div class="header__heading">
+              <h1 class="header__heading-title">Шахматная школа</h1>
+              <p class="header__heading-desc">Развитие мышленияи логики</p>
+              <div class="header__heading-info">
+                <p class="header__heading-tabline tabline--left">
+                  Срок обучения: 5 лет
+                </p>
+                <p class="header__heading-tabline tabline--right">
+                  Режим занятий: 2 раза в неделю по 2 академических часа
+                </p>
+              </div>
+
+              <span class="header__heading-price">от 4 350 ₽ в месяц</span>
+              <span class="header__heading-bonus">1 занятие бесплатное</span>
+              <p class="header__heading-subtitle">
+                Прежде чем начать обучение советуем записаться на пробное
+                заниятие
+              </p>
+              <button class="header__heading-button yellow-button">
+                Записаться на пробное занятие
+              </button>
+            </div>
+            <!-- правая часть -->
+            <div class="header__image">
+              <img
+                src="img/header_cover.jpeg"
+                alt=""
+                class="header__image-cover"
+              />
+            </div>
+          </div>
+
+          <!-- фигуры  -->
+
+          <!-- <img src="img/header_horse.svg" alt="" class="header_horse" />
+      <picture><source srcset="img/" type="image/webp"><img src="img/" alt="" class="header_vector1" /></picture>
+      <img src="" alt="" class="header_vector2" />
+      <img src="" alt="" class="header_vector3" />
+      <img src="" alt="" class="header_vector4" />
+      <img src="" alt="" class="header_vector5" />
+      <img src="" alt="" class="header_vector6" />
+      <img src="" alt="" class="header_vector7" /> -->
         </div>
       </div>
-    </div>
-
-    <div class="page-header__title">
-      <h1 class="page-header__title-table">Finance and Consultancy Solution</h1>
-      <p class="page-header__title-description">
-        We know how large objects will act, but things on a small scale.
-      </p>
-      <div class="page-header__title-buttons">
-        <button class="button page-header__title-button">Get Quote Now</button>
-        <button class="button page-header__title-button">Learn More</button>
-      </div>
-    </div>
-  </div>
-</header>
+    </header>
 
     <main class="container"></main>
-    <script src="js/app.min.js?_v=20240512110854"></script>
+    <script src="js/app.min.js?_v=20240512124032"></script>
   </body>
 </html>
