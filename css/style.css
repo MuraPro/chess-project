@@ -554,13 +554,6 @@ ul li {
      object-fit: cover;
 }
 
-.content-container {
-  max-width: 1200px;
-  padding: 0 2px;
-  margin: 0 auto;
-  min-height: 100px;
-}
-
 .logo__item {
   width: 100px;
   height: 70px;
@@ -749,6 +742,7 @@ ul li {
           align-items: center;
   gap: 50px;
   padding: 5px;
+  margin-bottom: 60px;
 }
 
 .aside__column-img {
@@ -771,6 +765,10 @@ ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px;
 }
 
 .aside__footer-table {
@@ -803,7 +801,7 @@ ul li {
   font-family: "Montserrat-b";
   font-size: 14px;
   line-height: 26px;
-  margin-bottom: 60px;
+  margin: 40px 0px 60px 0px;
 }
 
 .box__title {
@@ -950,6 +948,131 @@ ul li {
 
 /*section-features end*/
 
+/*section-teachers*/
+
+.no-webp .teachers {
+  background: url("../img/section-teachers/techers_cover.jpeg") center/cover; }
+
+.teachers {
+  padding-bottom: 100px;
+  min-height: 600px;
+  position: relative;
+}
+
+.teachers__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teachers__title {
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat-b";
+  font-size: 36px;
+  line-height: 44px;
+  margin: 60px 0px 40px 0px;
+}
+
+.teachers__cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  z-index: 6;
+  gap: 10px;
+}
+
+.teachers__card {
+  width: 280px;
+  height: 360px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.teachers__img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 25px;
+}
+
+.teachers__name {
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat-b";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.teachers__lead {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat-m";
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.techers__vector1 {
+  position: absolute;
+  top: 40px;
+  left: 290px;
+}
+
+.techers__vector2 {
+  position: absolute;
+  left: -58px;
+  bottom: 73px;
+}
+
+.techers__vector3 {
+  position: absolute;
+  bottom: 40px;
+  left: 51%;
+}
+
+.techers__vector4 {
+  position: absolute;
+  bottom: 141px;
+  right: 270px;
+}
+
+.techers__vector5 {
+  position: absolute;
+  top: 130px;
+  right: 42px;
+}
+
+/*section-teachers end*/
+
 html {
   scrollbar-gutter: stable;
 }
@@ -989,6 +1112,13 @@ main {
 
 .container {
   max-width: 1920px;
+  margin: 0 auto;
+  min-height: 1px;
+}
+
+.content-container {
+  max-width: 1200px;
+  padding: 0 2px;
   margin: 0 auto;
   min-height: 1px;
 }
@@ -1380,6 +1510,20 @@ main {
   .box__text {
     text-align: center;
   }
+
+  .teachers__cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .techers__vector3 {
+    display: none;
+  }
+
+  .techers__vector5 {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1416,6 +1560,20 @@ main {
   .aside__holder {
     padding: 0px 2px;
   }
+
+  .aside__row {
+    padding: 20px;
+  }
+
+  .teachers__title {
+    text-align: center;
+  }
+
+  .techers__vector1 {
+    display: none;
+  }
 }
 
 .webp .aside__footer { background: url(../img/section-aside/Subtract.webp) no-repeat top/cover; }
+
+.webp .teachers { background: url(../img/section-teachers/techers_cover.webp) center/cover; }
