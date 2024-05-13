@@ -1076,7 +1076,7 @@ ul li {
 /*section-accardion */
 
 .accardion {
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .accardion__container {
@@ -1214,6 +1214,256 @@ ul li {
 }
 
 /*section-accardion end*/
+
+/*form*/
+
+.form {
+  padding-bottom: 100px;
+  min-height: 500px;
+}
+
+.form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 40px;
+  padding: 2px;
+  width: 100%;
+  min-height: 270px;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  position: relative;
+}
+
+.form__container::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: inherit;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(247, 148, 29, 0.6)), to(rgba(39, 170, 225, 0.6)));
+  background: -o-linear-gradient(left, rgba(247, 148, 29, 0.6), rgba(39, 170, 225, 0.6));
+  background: linear-gradient(90deg, rgba(247, 148, 29, 0.6), rgba(39, 170, 225, 0.6));
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  z-index: -1;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.form__col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+.form__message {
+  position: relative;
+  width: 121%;
+  left: -97px;
+  top: 60px;
+}
+
+.form__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+  margin-top: 35px;
+}
+
+.form__name {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background: rgba(0, 9, 60, 0.1);
+  padding: 16px 0 16px 19px;
+  margin-bottom: 20px;
+}
+
+.form__name::-webkit-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__name::-moz-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__name:-ms-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__name::-ms-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__name::placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.form__phone {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background: rgba(0, 9, 60, 0.1);
+  padding: 16px 0 16px 19px;
+  margin-bottom: 20px;
+}
+
+.form__phone::-webkit-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__phone::-moz-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__phone:-ms-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__phone::-ms-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__phone::placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__email {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  background: rgba(0, 9, 60, 0.1);
+  padding: 16px 0 16px 19px;
+  margin-bottom: 20px;
+}
+
+.form__email::-webkit-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__email::-moz-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__email:-ms-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__email::-ms-input-placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__email::placeholder {
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.form__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.form__description {
+  width: 200px;
+  color: rgb(79, 79, 79);
+  font-family: "Montserrat";
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.form__button {
+  width: 210px;
+  height: 50.04px;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat-b";
+  font-size: 14px;
+  line-height: 26px;
+}
+
+/*form end*/
 
 html {
   scrollbar-gutter: stable;
@@ -1731,6 +1981,38 @@ main {
     width: 95%;
     text-align: left;
     margin-top: 10px;
+  }
+
+  .form__container {
+    display: block;
+  }
+
+  .form__col-1 {
+    display: none;
+  }
+
+  .form__inner {
+    padding: 5px;
+  }
+
+  .form__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .form__description {
+    width: 80%;
+    text-align: center;
+    font-size: 14px;
   }
 }
 
