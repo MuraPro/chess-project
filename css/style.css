@@ -264,7 +264,6 @@ ul li {
   font-family: "Montserrat-b";
   font-size: 42px;
   line-height: 51px;
-  letter-spacing: 0%;
   margin-bottom: 11px;
 }
 
@@ -273,7 +272,6 @@ ul li {
   font-family: "Montserrat-m";
   font-size: 24px;
   line-height: 29px;
-  letter-spacing: 0%;
   margin-bottom: 30px;
 }
 
@@ -286,7 +284,6 @@ ul li {
   font-family: "Montserrat-b";
   font-size: 28px;
   line-height: 34px;
-  letter-spacing: 0%;
   display: block;
   margin-bottom: 35px;
 }
@@ -858,6 +855,97 @@ ul li {
 
 /*slider end*/
 
+/*section-features*/
+
+.features {
+  margin-bottom: 70px;
+  min-height: 300px;
+}
+
+.features__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.features__text {
+  position: relative;
+  z-index: 6;
+}
+
+.features__image {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.features__message {
+  position: absolute;
+  bottom: 135px;
+  right: 200px;
+}
+
+.features__cation {
+  position: absolute;
+  bottom: 210px;
+  right: 280px;
+}
+
+.features__img {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+}
+
+.features__rook {
+  position: absolute;
+  right: 160px;
+  top: -50px;
+}
+
+.features__elephant {
+  position: absolute;
+  right: 50px;
+  top: -47px;
+}
+
+.features__farm {
+  position: absolute;
+  top: 97px;
+  right: 0px;
+}
+
+.features__horse {
+  position: absolute;
+  right: 130px;
+  top: 115px;
+}
+
+.header__heading-title {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat-b";
+  font-size: 36px;
+  line-height: 34px;
+}
+
+.header__heading-desc {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 26px;
+  width: 65%;
+}
+
+.header__heading-price {
+  color: rgb(0, 9, 60);
+}
+
+.info__tabline {
+  color: rgb(0, 9, 60);
+}
+
+/*section-features end*/
+
 html {
   scrollbar-gutter: stable;
 }
@@ -947,6 +1035,48 @@ main {
 
   .header__nav-li {
     margin-bottom: 10px;
+  }
+
+  .features__message {
+    display: none;
+  }
+
+  .features__cation {
+    display: none;
+  }
+
+  .features__img {
+    display: none;
+  }
+
+  .features__farm {
+    position: absolute;
+    top: -120px;
+    left: 150px;
+  }
+
+  .features__horse {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .header__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .header__heading-desc {
+    text-align: center;
+    width: 100%;
   }
 }
 
