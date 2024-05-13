@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css//dist/app.min.css" />
+  <link rel="stylesheet" href="css/app.css" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240512110854"
@@ -21,130 +21,328 @@
   
       </div>
       <div class="container courses__container">
-  
-  <div class="courses__siytbar">
-  
-  </div>	
-  
-  <div class="courses__central-block">
-    <ul class="courses__list list ">
-          
-        
-      <li class="list__item"  style="--colorsitems:#C7EEFF;">
-        <a href="#" class="card">
-        <div class="card-body">
-          <span class="card-title">Программа</span>
+        <div class="tabs">
+          <ul class="tabs__nav">
             
-          <div class="card-header">
-            <img src="img/head-icon.svg" alt="Разработка игр" class="card-img">
-            <h5 class="card-head">«Разработка мобильных приложений»</h5>
-          </div>
-  <div class="card-footer">
-  <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
-  на смартфонах, умных часах и планшетах. </p>
-  <span class="card-months">24 месяца</span>
-  </div>
-          </div>
-        </a>
-        </li>
-     
-        <li class="list__item"  style="--colorsitems:#C7EEFF;">
-          <a href="#" class="card">
-          <div class="card-body">
-            <span class="card-title">Программа</span>
-              
-            <div class="card-header">
-              <img src="img/head-icon.svg" alt="Разработка игр" class="card-img">
-              <h5 class="card-head">«Разработка мобильных приложений»</h5>
-            </div>
-    <div class="card-footer">
-    <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
-    на смартфонах, умных часах и планшетах. </p>
-    <span class="card-months">24 месяца</span>
-    </div>
-            </div>
-          </a>
-          </li>
-      
-          <li class="list__item"  style="--colorsitems:#C7EEFF;">
-            <a href="#" class="card">
-            <div class="card-body">
-              <span class="card-title">Программа</span>
-                
-              <div class="card-header">
-                <img src="img/head-icon.svg" alt="Разработка игр" class="card-img">
-                <h5 class="card-head">«Разработка мобильных приложений»</h5>
-              </div>
-      <div class="card-footer">
-      <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
-      на смартфонах, умных часах и планшетах. </p>
-      <span class="card-months">24 месяца</span>
-      </div>
+            <li class="tab__item tab__item--active">
+              <a href="#" class="tab__link">
+                <div class="tabs__icon-wrap"><img class="tabs__icon" src="/img/children.png" alt="Дети" width="49" height="49"  loading="lazy"></div>  
+                <div class="tabs__text-wrap">
+                <span class="tabs__text"> Дети</span> 
+                <span class="tabs__text-sub">8 — 14 лет</span>
               </div>
             </a>
             </li>
+ 
+            <li class="tab__item">
+              <a href="#" class="tab__link">
+                <div class="tabs__icon-wrap"><img class="tabs__icon" src="/img/children-1.png" alt="Подростки" width="49" height="49"  loading="lazy"></div>  
+                <div class="tabs__text-wrap">
+                <span class="tabs__text">Подростки</span> 
+                <span class="tabs__text-sub">14 — 18 лет</span>
+              </div>
+            </a>
+            </li>
+ 
+            <li class="tab__item">
+              <a href="#" class="tab__link">
+                <div class="tabs__icon-wrap"><img class="tabs__icon" src="/img/family.png" alt="Взрослые" width="49" height="49"  loading="lazy"></div>  
+                <div class="tabs__text-wrap">
+                <span class="tabs__text">Взрослые</span> 
+                <span class="tabs__text-sub">18 — ∞ </span>
+              </div>
+            </a>
+            </li>
+
+
+          </ul>
+          <hr class="tabs__line">
+        </div>
+  <div class="courses__siytbar">
+    <div class="filters">
+      <div class="filter">
+        <h6 class="filter__title title">Уровень сложности</h6>
+        <div class="filter__items">
+          <label class="filter__item">
+            <input type="checkbox" class="filter__checkbox" name="level">
+            <span class="filter__checkbox-label">Новичок</span>
+          </label>
+          <label class="filter__item">
+            <input type="checkbox" class="filter__checkbox" name="level">
+            <span class="filter__checkbox-label">Пользователь</span>
+          </label>
+          <label class="filter__item">
+            <input type="checkbox" class="filter__checkbox" name="level">
+            <span class="filter__checkbox-label">Профессионал</span>
+          </label>
+          <label class="filter__item">
+            <input type="checkbox" class="filter__checkbox" name="level">
+            <span class="filter__checkbox-label">Чктер</span>
+          </label>
+        </div>
+      </div>
+      <div class="filter">
+        <h6 class="filter__title title">Тип обучения</h6>
+        <div class="filter__items">
+          <label class="filter__item">
+            <input type="checkbox" class="filter__checkbox" name="type">
+            <span class="filter__checkbox-label">Любой</span>
+          </label>
+          <label class="filter__item">
+            <input type="checkbox" class="filter__checkbox" name="type">
+            <span class="filter__checkbox-label">Профессия</span>
+          </label>
+          <label class="filter__item">
+            <input type="checkbox" class="filter__checkbox" name="type">
+            <span class="filter__checkbox-label">Курс</span>
+          </label>
+        </div>
+      </div>
+    
+      <div class="filter">
+        <h6 class="filter__title title">Плительность</h6>
+        <div class="filter__items">
+          <label class="filter__item  filter__item--range">
+            <span class="filter__checkbox-label filter__checkbox-label--range ">1 до 24 месяц</span>
+            <div class="filter__wrap-progress">
+              <div class="filter_progress"></div>
+            </div> 
+            <div class="filter__wrap">
+              <input type="range" class="filter__range" data-range="min" min="0" max="24" step="1" value="0">
+              <input type="range" class="filter__range" data-range="max" min="0" max="24" step="1" value="24">
+            </div> 
+           
+          </label>
+          <script>
+         
+document.addEventListener("DOMContentLoaded", function() {
+    const ranges = document.querySelectorAll(".filter__range");
+    const progress = document.querySelector(".filter_progress");
+
+    ranges.forEach(input => {
+      let minValue = parseInt(ranges[0].value);
+      let maxValue = parseInt(ranges[1].value);
+
+            // Вычисляем процентное соотношение для минимального значения
+           progress.style.left = (minValue / ranges[1].max) * 100 + "%";
+           progress.style.right = 100 - (maxValue / ranges[0].max) * 100 + "%"; 
+        input.addEventListener('input', (e) => {
+            // Получаем значения двух ползунков и преобразуем их в числа
+            console.log(e.target);
+            let minValue = parseInt(ranges[0].value);
+            let maxValue = parseInt(ranges[1].value);
+
+            // Вычисляем процентное соотношение для минимального значения
+           progress.style.left = (minValue / ranges[1].max) * 100 + "%";
+           progress.style.right = 100 - (maxValue / ranges[0].max) * 100 + "%";
+            // Вычисляем процентное соотношение для максимального значения
+            //progress.style.right = 100 - (maxValue / ranges[1].max) * 100 + "%";
+        });
+    });
+});
+
+
       
-            <li class="list__item"  style="--colorsitems:#C7EEFF;">
+          
+          </script>
+        </div>
+        
+      </div>
+    </div>
+     
+  </div>	
+ 
+  <div class="courses__central-block tabs__item tabs__item_active">
+    <div class="tags">
+      <h6 class="tags__title  title">Направление</h5>
+      <ul class="tags__list">
+        <li class="tags__item">
+          <a href="#" class="tags__link">Робототехника</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">Создание игр</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">Web-разработка</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">Мультимедиа</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">Шахматы</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">3D-моделирование и дизайн</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">Английский язык</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">Блогинг</a>
+        </li>
+        <li class="tags__item">
+          <a href="#" class="tags__link">Soft skills</a>
+        </li>
+
+      </ul>
+      
+    </div>
+    <ul class="courses__list list ">
+          
+          <li class="list__item"  style="--colorsitems:#C7EEFF;">
+            <a href="#" class="card">
+              <span class="card-title">Программа</span>
+                
+              <div class="card-header">
+               <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                <h5 class="card-head">«Разработка мобильных приложений»</h5>
+              </div>
+      <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+      на смартфонах, умных часах и планшетах. </p>
+      <span class="card-months">24 месяца</span>
+     </a>
+            </li>
+      
+            <li class="list__item  list__item--promo"  style="--colorsitems:#FFCE94;  --content:'-30%';">
               <a href="#" class="card">
-              <div class="card-body">
                 <span class="card-title">Программа</span>
                   
                 <div class="card-header">
-                  <img src="img/head-icon.svg" alt="Разработка игр" class="card-img">
+                 <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
                   <h5 class="card-head">«Разработка мобильных приложений»</h5>
                 </div>
-        <div class="card-footer">
         <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
         на смартфонах, умных часах и планшетах. </p>
         <span class="card-months">24 месяца</span>
-        </div>
-                </div>
-              </a>
+       </a>
               </li>
-      
-              <li class="list__item"  style="--colorsitems:#C7EEFF;">
+
+
+              <li class="list__item "  style="--colorsitems:#FFE38E;">
                 <a href="#" class="card">
-                <div class="card-body">
                   <span class="card-title">Программа</span>
                     
                   <div class="card-header">
-                    <img src="img/head-icon.svg" alt="Разработка игр" class="card-img">
+                   <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
                     <h5 class="card-head">«Разработка мобильных приложений»</h5>
                   </div>
-          <div class="card-footer">
           <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
           на смартфонах, умных часах и планшетах. </p>
           <span class="card-months">24 месяца</span>
-          </div>
-                  </div>
-                </a>
+         </a>
                 </li>
-      
-      <li class="list__item"  style="--colorsitems:#C7EEFF;">
-        <a href="#" class="card">
-        <div class="card-body">
-          <span class="card-title">Программа</span>
+
+
+                <li class="list__item  "  style="--colorsitems:#DDDDFF;">
+                  <a href="#" class="card">
+                    <span class="card-title">Программа</span>
+                      
+                    <div class="card-header">
+                     <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                      <h5 class="card-head">«Разработка мобильных приложений»</h5>
+                    </div>
+            <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+            на смартфонах, умных часах и планшетах. </p>
+            <span class="card-months">24 месяца</span>
+           </a>
+                  </li>
+                  
             
-          <div class="card-header">
-            <img src="img/head-icon.svg" alt="Разработка игр" class="card-img">
-            <h5 class="card-head">«Разработка мобильных приложений»</h5>
-          </div>
-  <div class="card-footer">
-  <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
-  на смартфонах, умных часах и планшетах. </p>
-  <span class="card-months">24 месяца</span>
-  </div>
-          </div>
-        </a>
-        </li>
-                         
+                <li class="list__item  list__item--promo"  style="--colorsitems:#B8EFCF;  --content:'-10%';">
+                  <a href="#" class="card">
+                    <span class="card-title">Программа</span>
+                      
+                    <div class="card-header">
+                     <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                      <h5 class="card-head">«Разработка мобильных приложений»</h5>
+                    </div>
+            <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+            на смартфонах, умных часах и планшетах. </p>
+            <span class="card-months">24 месяца</span>
+           </a>
+                  </li>
+                
+
+                  <li class="list__item  list__item--promo"  style="--colorsitems:#C7EEFF;  --content:'-10%';">
+                    <a href="#" class="card">
+                      <span class="card-title">Программа</span>
+                        
+                      <div class="card-header">
+                       <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                        <h5 class="card-head">«Разработка мобильных приложений»</h5>
+                      </div>
+              <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+              на смартфонах, умных часах и планшетах. </p>
+              <span class="card-months">24 месяца</span>
+             </a>
+                    </li>
+                
+                    <li class="list__item"  style="--colorsitems:#C5DDFF;">
+                      <a href="#" class="card">
+                        <span class="card-title">Программа</span>
+                          
+                        <div class="card-header">
+                         <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                          <h5 class="card-head">«Разработка мобильных приложений»</h5>
+                        </div>
+                <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                на смартфонах, умных часах и планшетах. </p>
+                <span class="card-months">24 месяца</span>
+               </a>
+                      </li>
+                
+                      <li class="list__item"  style="--colorsitems:#FFE9A8;">
+                        <a href="#" class="card">
+                          <span class="card-title">Программа</span>
+                            
+                          <div class="card-header">
+                           <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                            <h5 class="card-head">«Разработка мобильных приложений»</h5>
+                          </div>
+                  <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                  на смартфонах, умных часах и планшетах. </p>
+                  <span class="card-months">24 месяца</span>
+                 </a>
+                        </li>
+                
+                        <li class="list__item "  style="--colorsitems:#FFEEF6;">
+                          <a href="#" class="card">
+                            <span class="card-title">Программа</span>
+                              
+                            <div class="card-header">
+                             <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                              <h5 class="card-head">«Разработка мобильных приложений»</h5>
+                            </div>
+                    <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                    на смартфонах, умных часах и планшетах. </p>
+                    <span class="card-months">24 месяца</span>
+                   </a>
+                          </li>
+                
+                          <li class="list__item"  style="--colorsitems:#DDDDFF;">
+                            <a href="#" class="card">
+                              <span class="card-title">Программа</span>
+                                
+                              <div class="card-header">
+                               <div class="card-icon-wrap"><img src="img/head-icon.svg" alt="Разработка игр" class="card-img"></div> 
+                                <h5 class="card-head">«Разработка мобильных приложений»</h5>
+                              </div>
+                      <p class="card-text">Разработчик мобильных приложений создаёт приложения, которыми люди ежедневно пользуются 
+                      на смартфонах, умных часах и планшетах. </p>
+                      <span class="card-months">24 месяца</span>
+                     </a>
+                            </li>
+                                              
     </ul>
   
   </div>
+  <div class="courses__central-block tabs__item">
+  </div>
+  <div class="courses__central-block tabs__item">
+  </div>
         
       </div>
-    </section>	
-  
-    <script src="js/app.min.js?_v=20240512110854"></script>
+    </section>
+    <script src="/js/app.js"></script>	
   </body>
 </html>

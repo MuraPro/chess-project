@@ -14,11 +14,13 @@ function sassCompilation() {
 }
 
 // Функция для минификации CSS
+// Функция для минификации CSS
 function cssMinification() {
-    return gulp.src('css/*.css')
+    return gulp.src('css/*.css') // Исходные CSS файлы
         .pipe(cleanCSS())
         .pipe(rename({ suffix: '.min' })) // добавляем суффикс .min к именам файлов
-        .pipe(gulp.dest('css/dist')); // сохраняем минифицированные файлы в папку dist/css
+        .pipe(gulp.dest('css/dist')) // сохраняем минифицированные файлы в папку dist/css
+        .pipe(browserSync.stream()); // передаем их в поток для обновления браузера
 }
 
 // Функция для запуска сервера BrowserSync и поддержки SSI

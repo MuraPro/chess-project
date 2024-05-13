@@ -1,65 +1,60 @@
 @charset "UTF-8";
 @font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-family: "Montserrat-all";
+  font-style: "normal";
   font-weight: 400;
-  font-style: normal;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Montserrat-b";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-family: "Montserrat-all";
+  font-style: "bold";
   font-weight: 700;
-  font-style: normal;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Montserrat-bl";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff");
+  font-family: "Montserrat-all";
+  font-style: "black";
   font-weight: 900;
-  font-style: normal;
+  src: url("../fonts/Montserrat-Black.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-family: "Montserrat-all";
+  font-style: "light";
   font-weight: 300;
-  font-style: normal;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-family: "Montserrat-all";
+  font-style: "medium";
   font-weight: 500;
-  font-style: normal;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-family: "Montserrat-all";
+  font-style: "semiBold";
   font-weight: 600;
-  font-style: normal;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Thin.woff2") format("woff2"), url("../fonts/Montserrat-Thin.woff") format("woff");
+  font-family: "Montserrat-all";
+  font-style: "thin";
   font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Thin.woff2") format("woff2"), url("../fonts/Montserrat-Thin.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
+  src: url("../fonts/Montserrat-Thin.woff2") format("woff2");
 }
 :root {
   --main-color:#fff;
+  --main-color-text:#000;
   --accent-color:#00093C;
   --hover:#273db8;
   --text-color:#333;
+  --colorsitems:#C7EEFF;
+  --border-radius-items:20px;
+  --promo-color: rgb(241, 18, 18);
+  --layout-color-shedow:linear-gradient(90.00deg, rgb(247, 148, 29),rgb(39, 170, 225) 100%);
+  --layout-color-shedow-hover:linear-gradient(90.00deg, rgb(247, 148, 29),rgb(39, 170, 225) 100%);
+  --layout-blur-shedow:16px;
+  --layout-opasity-shedow:0.3;
+  --animation: all .3s ease-in-out;
 }
 
 * {
@@ -148,12 +143,22 @@ input:required:valid, textarea:required:valid {
   border-color: green;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: var(--main-color-text);
+}
+
 body {
-  font: 16px 400 "Montserrat" sans-serif;
-  line-height: 1.65;
+  font-family: "Montserrat-all", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18PX;
   overflow-x: hidden;
   color: var(--text-color);
   background-color: var(--main-color);
+}
+
+.section {
+  margin: 50px 0;
 }
 
 .container {
@@ -162,24 +167,407 @@ body {
   margin: 0 auto;
 }
 
+.head {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--main-color-text);
+  margin-bottom: 50px;
+}
+
+.tabs {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+.tabs__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex: 0 0 75%;
+}
+
+.tab__item {
+  flex: 0 0 auto;
+}
+
+.tab__link {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding-bottom: 15px;
+  position: relative;
+}
+.tab__link::after {
+  content: "";
+  background: var(--layout-color-shedow);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  height: 5px;
+  width: 0;
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: var(--animation);
+}
+.tab__link:hover::after, .tab__link:focus::after, .tab__link:active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.tabs__item {
+  display: none;
+}
+
+.tabs__item_active {
+  display: block;
+}
+
+.tab__item--active .tab__link::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.tabs__icon-wrap {
+  align-self: center;
+  width: 49px;
+}
+
+.tabs__icon {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.tabs__text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tabs__text {
+  color: var(--main-color-text);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.tabs__text-sub {
+  color: var(--text-color);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.tabs__line {
+  flex: 0 0 100%;
+  border: 1px solid #E0E0E0;
+}
+
 .courses__container {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .courses__siytbar {
-  flex: 0 0 30%;
+  flex: 0 0 25%;
 }
 
 .courses__central-block {
-  flex: 0 0 70%;
+  flex: 0 0 75%;
 }
 
 .list {
   display: flex;
-  gap: 20px; /* промежуток между ячейками */
+  gap: 25px; /* промежуток между ячейками */
   flex-wrap: wrap;
 }
 
 .list__item {
-  flex: 0 0 calc(50% - 24px);
+  flex: 1 1 calc(50% - 24px);
+  position: relative;
+}
+.list__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(var(--layout-blur-shedow));
+  background: var(--layout-color-shedow);
+  opacity: var(--layout-opasity-shedow);
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-items);
+  transition: var(--animation);
+}
+.list__item:has(.card:hover, .card:focus, .card:active)::after {
+  --layout-blur-shedow: 25px;
+  filter: blur(var(--layout-blur-shedow));
+  background: var(--layout-color-shedow-hover);
+  --layout-opasity-shedow: 0.8;
+  opacity: var(--layout-opasity-shedow);
+  left: 11px;
+  top: 7px;
+}
+.list__item--promo::before {
+  content: var(--content);
+  background: var(--promo-color);
+  border-radius: var(--border-radius-items);
+  color: var(--main-color);
+  font-size: 12px;
+  font-weight: 700;
+  position: absolute;
+  right: -1%;
+  bottom: 12%;
+  padding: 10px 17px;
+  z-index: 3;
+}
+
+.card {
+  display: block;
+  border-radius: var(--border-radius-items);
+  position: relative;
+  background-color: var(--colorsitems);
+  z-index: 2;
+  padding: 20px;
+}
+
+.card-title {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10PX;
+  margin-bottom: 10PX;
+}
+
+.card-icon-wrap {
+  align-self: center;
+  width: 26px;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-head {
+  font-size: 18px;
+  font-weight: 500;
+  word-break: break-word;
+  width: 100%;
+  color: rgb(0, 9, 60);
+}
+
+.card-text {
+  color: rgb(79, 79, 79);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.card-months {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.tags {
+  margin-bottom: 40px;
+}
+
+.tags__title {
+  margin: 0 0 20px 0;
+}
+
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tags__item {
+  flex: 0 0 auto;
+  position: relative;
+}
+.tags__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  --layout-blur-shedow:9px;
+  filter: blur(var(--layout-blur-shedow));
+  background: var(--layout-color-shedow);
+  --layout-opasity-shedow:0.3;
+  opacity: var(--layout-opasity-shedow);
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: var(--animation);
+}
+.tags__item:has(.tags__link:hover, .tags__link:focus, .tags__link:active)::after {
+  --layout-blur-shedow: 11px;
+  filter: blur(var(--layout-blur-shedow));
+  background: var(--layout-color-shedow-hover);
+  --layout-opasity-shedow: 0.5;
+  opacity: var(--layout-opasity-shedow);
+  left: 3px;
+  top: 6px;
+}
+
+.tags__link {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 3px;
+  background: var(--main-color);
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main-color-text);
+}
+
+.tags__link:hover {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main-color-text);
+}
+
+.filter {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 0 0 20px 0;
+  margin: 0 10px 20px 10px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--main-color-text);
+}
+
+.filter__title {
+  margin-bottom: 20px;
+}
+
+.filter__items + .filter__items {
+  margin-top: 20px;
+}
+
+.filter__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.filter__item--range {
+  display: block;
+}
+
+.filter__checkbox {
+  align-self: center;
+}
+
+.filter__checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid var(--main-color-text);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter__checkbox:checked {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='20.000000' height='20.000000' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdesc%3E Created with Pixso. %3C/desc%3E%3Cdefs%3E%3ClinearGradient x1='0.000000' y1='9.999998' x2='19.999996' y2='9.999998' id='paint_linear_2201_62_0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F7941D'/%3E%3Cstop offset='1.000000' stop-color='%2327AAE1'/%3E%3C/linearGradient%3E%3ClinearGradient x1='5.000000' y1='9.999999' x2='14.999998' y2='9.999999' id='paint_linear_2201_63_0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F7941D'/%3E%3Cstop offset='1.000000' stop-color='%2327AAE1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle id='Ellipse 186' cx='10.000000' cy='10.000000' r='10.000000' fill='%23FFFFFF' fill-opacity='1.000000'/%3E%3Ccircle id='Ellipse 186' cx='10.000000' cy='10.000000' r='9.000000' stroke='url(%23paint_linear_2201_62_0)' stroke-opacity='1.000000' stroke-width='2.000000'/%3E%3Ccircle id='Ellipse 187' cx='10.000000' cy='10.000000' r='5.000000' fill='url(%23paint_linear_2201_63_0)' fill-opacity='1.000000'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+.filter__checkbox:checked ~ .filter__checkbox-label {
+  font-weight: 700;
+}
+
+.filter__checkbox-label {
+  display: block;
+  font-size: 14px;
+}
+.filter__checkbox-label--range {
+  margin-bottom: 10px;
+}
+
+.filter__wrap-progress {
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  position: relative;
+}
+
+.filter_progress {
+  position: absolute;
+  height: 5px;
+  right: 26%;
+  left: 26%;
+  background: var(--layout-color-shedow);
+  border-radius: 5px;
+}
+
+.filter__wrap {
+  position: relative;
+}
+
+.filter__range {
+  position: absolute;
+  top: -5px;
+  width: 100%;
+  height: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  pointer-events: none;
+}
+
+.filter__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  pointer-events: auto;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='20.000000' height='20.000000' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdesc%3E Created with Pixso. %3C/desc%3E%3Cdefs%3E%3ClinearGradient x1='0.000000' y1='9.999998' x2='19.999996' y2='9.999998' id='paint_linear_2201_62_0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F7941D'/%3E%3Cstop offset='1.000000' stop-color='%2327AAE1'/%3E%3C/linearGradient%3E%3ClinearGradient x1='5.000000' y1='9.999999' x2='14.999998' y2='9.999999' id='paint_linear_2201_63_0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F7941D'/%3E%3Cstop offset='1.000000' stop-color='%2327AAE1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle id='Ellipse 186' cx='10.000000' cy='10.000000' r='10.000000' fill='%23FFFFFF' fill-opacity='1.000000'/%3E%3Ccircle id='Ellipse 186' cx='10.000000' cy='10.000000' r='9.000000' stroke='url(%23paint_linear_2201_62_0)' stroke-opacity='1.000000' stroke-width='2.000000'/%3E%3Ccircle id='Ellipse 187' cx='10.000000' cy='10.000000' r='5.000000' fill='url(%23paint_linear_2201_63_0)' fill-opacity='1.000000'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.filter__range::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='20.000000' height='20.000000' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdesc%3E Created with Pixso. %3C/desc%3E%3Cdefs%3E%3ClinearGradient x1='0.000000' y1='9.999998' x2='19.999996' y2='9.999998' id='paint_linear_2201_62_0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F7941D'/%3E%3Cstop offset='1.000000' stop-color='%2327AAE1'/%3E%3C/linearGradient%3E%3ClinearGradient x1='5.000000' y1='9.999999' x2='14.999998' y2='9.999999' id='paint_linear_2201_63_0' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F7941D'/%3E%3Cstop offset='1.000000' stop-color='%2327AAE1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle id='Ellipse 186' cx='10.000000' cy='10.000000' r='10.000000' fill='%23FFFFFF' fill-opacity='1.000000'/%3E%3Ccircle id='Ellipse 186' cx='10.000000' cy='10.000000' r='9.000000' stroke='url(%23paint_linear_2201_62_0)' stroke-opacity='1.000000' stroke-width='2.000000'/%3E%3Ccircle id='Ellipse 187' cx='10.000000' cy='10.000000' r='5.000000' fill='url(%23paint_linear_2201_63_0)' fill-opacity='1.000000'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
