@@ -1511,6 +1511,7 @@ ul li {
 
 .content-footer {
   width: 100%;
+  margin-top: -34px;
 }
 
 .content-footer__container {
@@ -1584,7 +1585,7 @@ ul li {
 }
 
 .content-footer__list {
-  margin-top: 30px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1789,6 +1790,14 @@ main {
             align-items: center;
   }
 
+  .form__container {
+    width: 95%;
+  }
+
+  .content-footer {
+    margin-top: 20px;
+  }
+
   .content-footer__brand-list {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1799,6 +1808,7 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 30px;
   }
 }
 
@@ -2217,7 +2227,6 @@ main {
 
   .form__container {
     display: block;
-    margin-bottom: 50px;
   }
 
   .form__col-1 {
