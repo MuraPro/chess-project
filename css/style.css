@@ -308,7 +308,7 @@ ul li {
   font-family: "Montserrat";
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .header__heading-button {
@@ -807,7 +807,7 @@ ul li {
   font-family: "Montserrat-b";
   font-size: 14px;
   line-height: 26px;
-  margin: 40px 0px 40px 0px;
+  margin: 40px 0px 0px 0px;
 }
 
 .box__title {
@@ -862,7 +862,7 @@ ul li {
 /*section-features*/
 
 .features {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   min-height: 300px;
 }
 
@@ -1083,7 +1083,7 @@ ul li {
 /*section-accardion */
 
 .accardion {
-  margin-bottom: 100px;
+  margin-bottom: 25px;
 }
 
 .accardion__container {
@@ -1803,7 +1803,7 @@ main {
   }
 
   .content-footer {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .content-footer__brand-list {
@@ -1874,6 +1874,12 @@ main {
     display: none;
   }
 
+  .aside__footer {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
   .aside__footer-table {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1900,6 +1906,7 @@ main {
 
   .aside__section-caption {
     text-align: center;
+    padding-top: 10px;
   }
 
   .swiper-slide {
@@ -2212,7 +2219,7 @@ main {
   }
 
   .aside__footer-btn {
-    margin: 20px 0px 20px 0px;
+    margin: 30px 0px 20px 0px;
   }
 
   .slider {
@@ -2254,7 +2261,7 @@ main {
   }
 
   .form__inner {
-    padding: 5px;
+    padding: 5px 0 0 20px;
   }
 
   .form__row {
@@ -2262,6 +2269,10 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+
+  .form__phone {
+    margin-bottom: 0px;
   }
 
   .form__footer {
